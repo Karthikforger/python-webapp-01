@@ -1,0 +1,19 @@
+*.python-version
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python compiler caches and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+
+# Optional environment variables (for secrets)
+.env

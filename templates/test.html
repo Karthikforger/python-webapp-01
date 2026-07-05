@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} login-Page {% endblock %}</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <!-- <nav> -->
+            <ul class="icons">
+                <li>Welcome </li>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                    <li><a href="{{url_for('contact_us')}}">Contact-Us</a></li>
+                </ul>
+                <ul>
+                    <li><a href="{{ url_for('login')}}">Login</a></li>
+                    <li><a href="{{ url_for('sign_up')}}">Sign up</a></li>
+                </ul>
+            </ul>
+            <!-- {# <ul class="pages">
+                <li>Welcome</li>
+                <li>
+                    <select name="Page" id="Page">
+                        <option value="Home">Home</option>
+                        <option value="Home">About</option>
+                        <option value="Home">Contact</option>
+                    </select>
+                </li>
+            </ul> #} -->
+        <!-- </nav> -->
+    </header>
+    <main>
+        <form action="/" method="POST">
+        <div class="form-items">
+            <label for="name">NAME: </label>
+            <input type="text" name="name" id="name" placeholder="Example">
+        </div>
+        <!-- <br> -->
+        <div class="form-items">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Example@gmail.com">
+        </div>
+        <div class="form-items">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="Example@123">
+        </div>
+        <!-- <br> -->
+        <div class="form-items btn">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+    </main>
+</body>
+
+</html>
