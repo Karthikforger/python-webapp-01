@@ -15,12 +15,17 @@ def about():
 def contact_us():
     return render_template('contact.html')
 
-@app.route('/login')
+@app.route('/login', methods=["GET","POST"])
 def login():
     return render_template('login.html')
 
-@app.route('/sign')
+@app.route('/sign', methods=["GET","POST"])
 def sign_up():
+    if request.method=="POST":
+        name=request.form.get("name")
+        email=request.form.get("email")
+        password=request.form.get("password")
+        return render_template('welcome.html', name=name, email=email, password=password)
     return render_template('signup.html')
 # @app.route('home')
 # def home

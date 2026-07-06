@@ -17,3 +17,6 @@ Thumbs.db
 
 # Optional environment variables (for secrets)
 .env
+# Unwanted Files
+templates/test.html
+static/style1.css

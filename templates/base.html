@@ -3,44 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} login-Page {% endblock %}</title>
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    <title> {% block title %} {% endblock %} </title>
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="icons">
-                <li>Welcome </li>
-                <ul>
-                    <li><a href="{{url_for('home')}}">Home</a></li>
-                    <li><a href="{{url_for('about')}}">About</a></li>
-                    <li><a href="{{url_for('contact_us')}}">Contact-Us</a></li>
-                </ul>
-                <ul>
-                    <li><a href="{{ url_for('login')}}">Login</a></li>
-                    <li><a href="{{ url_for('sign_up')}}">Sign up</a></li>
-                </ul>
+        <ul class="nav">
+            <li>Welcome </li>
+            <ul class="icon">
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('about')}}">About</a></li>
+                <li><a href="{{url_for('contact_us')}}">Contact-Us</a></li>
             </ul>
-            <!-- {# <ul class="pages">
-                <li>Welcome</li>
-                <li>
-                    <select name="Page" id="Page">
-                        <option value="Home">Home</option>
-                        <option value="Home">About</option>
-                        <option value="Home">Contact</option>
-                    </select>
-                </li>
-            </ul> #} -->
-        </nav>
+            <ul class="icon">
+                <li><a href="{{ url_for('login')}}">Login</a></li>
+                <li><a href="{{ url_for('sign_up')}}">Sign up</a></li>
+            </ul>
+        </ul>
     </header>
     <main>
         {% block content %}
         {% endblock %}
     </main>
     <footer>
-        <h4>This is &copy; Y Kartik Rao , the test web app. </h4>
+        <p>This is copywright &copy; <a href="https://github.com/Karthikforger" >Karthikforger </a></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius perspiciatis omnis aliquam labore consectetur, molestias laudantium. Cumque quod, qui laboriosam illum inventore voluptas fugit laudantium.</p>
     </footer>
 </body>
 
