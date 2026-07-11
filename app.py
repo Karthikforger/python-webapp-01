@@ -22,7 +22,7 @@ def login():
         email=request.form.get("email")
         password=request.form.get("password")
         return render_template('welcome.html', name=name, email=email, password=password)
-    return render_template('login.html')
+    return render_template('Login.html')
 
 @app.route('/sign', methods=["GET","POST"])
 def sign_up():
