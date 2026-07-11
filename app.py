@@ -17,6 +17,11 @@ def contact_us():
 
 @app.route('/login', methods=["GET","POST"])
 def login():
+    if request.method=="POST":
+        name=request.form.get("name")
+        email=request.form.get("email")
+        password=request.form.get("password")
+        return render_template('welcome.html', name=name, email=email, password=password)
     return render_template('login.html')
 
 @app.route('/sign', methods=["GET","POST"])
